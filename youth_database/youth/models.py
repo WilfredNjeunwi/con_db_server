@@ -25,7 +25,7 @@ class Youth(models.Model):
     gift_2 = models.CharField(max_length=50, blank=True)
     gift_3 = models.CharField(max_length=50, blank=True)
     orphant = models.BooleanField(default=False)
-    blood_group = models.CharField(max_length=3, choices=BLOOD_GROUP_CHOICES)
+    blood_group = models.CharField(max_length=3, choices=BLOOD_GROUP_CHOICES, null=True, blank=True)
 
     def __str__(self):
         return self.name
